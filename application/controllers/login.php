@@ -68,6 +68,7 @@ class Login extends CI_Controller{
 	public function username_check($str)
 	{
 			$this->db->where('username');
+			$query=$this->db->get('membership');
   		if ($str == 'test')
   			{
    			$this->form_validation->set_message('username_check', 'The username has already been registered.');
