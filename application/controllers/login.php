@@ -13,6 +13,7 @@ class Login extends CI_Controller{
 		$this->load->model('membership_model');
 		$query=$this->membership_model->validate();
 
+
 		if($query)
 		{
 			$data = array(
@@ -42,10 +43,9 @@ class Login extends CI_Controller{
 
 		$this->form_validation->set_rules('email_address','Email Address','trimlrequired|valid_email');
 
-		$this->form_validation->set_rules('username','Username','trimlrequired|min_length[4]');
+		$this->form_validation->set_rules('username','Username','trimlrequired|min_length[4]|callback_username_check');
 		$this->form_validation->set_rules('password','Password','trimlrequired|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('password2','Password Confirmation','trimlrequired|matches[password]');
-
 		if ($this->form_validation->run()==FALSE) 
 			{
 				$this->signup();
@@ -65,4 +65,17 @@ class Login extends CI_Controller{
 		}
 		
 	}
+	public function username_check($str)
+	{
+			$this->db->where('username');
+  		if ($str == 'test')
+  			{
+   			$this->form_validation->set_message('username_check', 'The username has already been registered.');
+  			return FALSE;
+  			}
+  		else
+  			{
+   			return TRUE;
+  			}
+ 	}
 }

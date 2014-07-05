@@ -7,8 +7,7 @@ class Membership_model extends CI_Model{
 		$this->db->where('username',$this->input->post('username'));
 		$this->db->where('password',md5($this->input->post('password')));
 		$query=$this->db->get('membership');
-
-		if($query->num_rows ==1)
+		if($query->num_rows() ==1)
 		{
 			return true;
 		}
@@ -30,11 +29,13 @@ class Membership_model extends CI_Model{
 	function getpower()
 	{
 		$power = 0;
-		for($i=1;$i<11;$i++){
+		for($i=1;$i<11;$i++)
+		{
 			$power += intval($this->input->post('q'.$i));
 		}
 		var_dump($power);
 		var_dump($this->input->post());
 		return $power;
 	}
+
 }
