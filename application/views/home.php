@@ -15,6 +15,13 @@
                 <li><a href="<?php echo site_url('login') ?>">登录</a></li>
                 <li><a href="<?php echo site_url('login/signup') ?>">注册</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                      <?php echo $this->session->userdata('user_name');?>
+                    </a>
+                </li>
+            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>
