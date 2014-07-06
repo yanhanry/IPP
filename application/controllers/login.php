@@ -22,7 +22,7 @@ class Login extends CI_Controller
             );
 
             $this->session->set_userdata($data);
-            redirect('site/members_area');
+            redirect('');
         } else {
             $data['main_content'] = 'login_form';
             $data['login_error'] = '用户名或密码错误';
