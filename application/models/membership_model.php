@@ -33,8 +33,6 @@ class Membership_model extends CI_Model{
 		{
 			$power += intval($this->input->post('q'.$i));
 		}
-		var_dump($power);
-		var_dump($this->input->post());
 		return $power;
 	}
 

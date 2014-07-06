@@ -21,7 +21,7 @@
 	?>
 
 	<?php echo validation_errors('<p class="error">'); ?>
-</fieldset>
+</fieldset>	
 
 <fieldset>
 	<legend> Personal Ability	</legend>
