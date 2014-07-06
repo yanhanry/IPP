@@ -13,7 +13,6 @@ class Login extends CI_Controller{
 		$this->load->model('membership_model');
 		$query=$this->membership_model->validate();
 
-
 		if($query)
 		{
 			$data = array(
@@ -22,7 +21,7 @@ class Login extends CI_Controller{
 				);
 
 			$this->session->set_userdata($data);
-			redirect('site/members_area');
+			redirect('');
 		}
 
 		else
@@ -30,6 +29,7 @@ class Login extends CI_Controller{
 			$this->index();
 		}
 	}
+
 	function signup()
 	{
 		$data['main_content']='signup_form';
@@ -65,6 +65,7 @@ class Login extends CI_Controller{
 		}
 		
 	}
+
 	public function username_check($str)
 	{
 			$this->db->where('username',$str);
