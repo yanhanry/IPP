@@ -14,6 +14,7 @@
                 <li class="active"><a href="<?php echo site_url() ?>">首页</a></li>
                 <li><a href="<?php echo site_url('login') ?>">登录</a></li>
                 <li><a href="<?php echo site_url('login/signup') ?>">注册</a></li>
+                <li><a herf-"<?php echo site_url('login/fighting') ?>">炸天</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
