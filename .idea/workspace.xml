@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac1979a3-1052-4ee1-afb3-d1ad2a10eace" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/PHPMailerAutoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/class.phpmailer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/class.pop3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/class.smtp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/send.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/fight.php" afterPath="$PROJECT_DIR$/application/controllers/fight.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/fight_form.php" afterPath="$PROJECT_DIR$/application/views/fight_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/login.php" afterPath="$PROJECT_DIR$/application/controllers/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login_form.php" afterPath="$PROJECT_DIR$/application/views/login_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IPP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="46" selection-start="696" selection-end="696" vertical-scroll-proportion="-20.76923" vertical-offset="0" max-vertical-offset="2400">
+            <state line="46" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.35573122" vertical-offset="1200" max-vertical-offset="2490">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="send.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/send.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="0.46242774" vertical-offset="0" max-vertical-offset="660">
+            <state line="13" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="-6.1538463" vertical-offset="0" max-vertical-offset="660">
               <folding>
                 <element signature="e#7#86#0" expanded="false" />
               </folding>
@@ -73,8 +68,8 @@
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/views/login_form.php" />
-        <option value="$PROJECT_DIR$/application/controllers/login.php" />
         <option value="$PROJECT_DIR$/application/controllers/send.php" />
+        <option value="$PROJECT_DIR$/application/controllers/login.php" />
       </list>
     </option>
   </component>
@@ -352,19 +347,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="46" selection-start="696" selection-end="696" vertical-scroll-proportion="-20.76923" vertical-offset="0" max-vertical-offset="2400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/send.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="0.46242774" vertical-offset="0" max-vertical-offset="660">
+        <state line="13" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="-6.1538463" vertical-offset="0" max-vertical-offset="660">
           <folding>
             <element signature="e#7#86#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.35573122" vertical-offset="1200" max-vertical-offset="2490">
+          <folding />
         </state>
       </provider>
     </entry>

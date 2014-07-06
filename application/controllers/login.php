@@ -36,12 +36,14 @@ class Login extends CI_Controller
         $this->load->view('includes/template', $data);
     }
 
+
     function create_member()
     {
 
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('email_address', 'Email Address', 'trimlrequired|valid_email');
+
 
         $this->form_validation->set_rules('username', 'Username', 'trimlrequired|min_length[4]|callback_username_check');
         $this->form_validation->set_rules('password', 'Password', 'trimlrequired|min_length[4]|max_length[32]');
@@ -57,6 +59,7 @@ class Login extends CI_Controller
                 $this->load->view('signup_form');
             }
         }
+
 
     }
 
