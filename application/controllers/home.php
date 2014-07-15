@@ -75,21 +75,25 @@ class home extends MY_Controller
 
         $this->load->library('mailer');
 
-        /* 发邮件 需要到 application/libraries/mailer.php里改发送信箱
+        // 发邮件 需要到 application/libraries/mailer.php里改发送信箱
         // 获取发起人的信息
         $sql = 'SELECT * FROM membership WHERE id=?';
         $starter = $this->db->query($sql, array($fight['starter']))->row_array();
         $opt = array('name' => $starter['username'],
             'dst' => $starter['email_address'],
             'content' =>
-            $this->user_lib->name() . '邀请你打球'
+                '羽梯上的 ' .
+                $this->user_lib->name() .
+                ' 邀请你打球'.
+                '开始时间  '. $fight['start_time'] .'  ' .
+                '结束时间 '. $fight['end_time']
             //TODO:具体的时间和地点
         );
 
         if (!$this->mailer->send($opt)) {
             $err_msg[] = '无法发送邮件';
         }
-        */
+
 
         if (!empty($err_msg)) {
             $data['err_msg'] = $err_msg;

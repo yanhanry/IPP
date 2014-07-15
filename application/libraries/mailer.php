@@ -34,19 +34,20 @@ class mailer
         $mail = new PHPMailer;
 
         $mail->isSMTP(); // Set mailer to use SMTP
-        $mail->Host = 'smtp.126.com'; // Specify main and backup SMTP servers
+        $mail->CharSet = 'UTF-8';
+        $mail->Host = 'smtp.163.com'; // Specify main and backup SMTP servers
         $mail->SMTPAuth = true; // Enable SMTP authentication
-        $mail->Username = 'yanbianlaoshi@126.com'; // SMTP username
-        $mail->Password = 'yanbianlaoshi'; // SMTP password
+        $mail->Username = 'zhabianteng@163.com'; // SMTP username
+        $mail->Password = '29561777y'; // SMTP password
 
-        $mail->From = 'yanbianlaoshi@126.com';
-        $mail->FromName = 'fight';
+        $mail->From = 'zhabianteng@163.com';
+        $mail->FromName = '羽梯';
         $mail->addAddress($opt['dst'], $opt['name']); // Add a recipient
 
         $mail->WordWrap = 50; // Set word wrap to 50 characters
         $mail->isHTML(true); // Set email format to HTML
 
-        $mail->Subject = '约架！';
+        $mail->Subject = '有人要跟你打羽毛球';
         $mail->Body = $opt['content'];
         $mail->AltBody = $opt['content'];
 
