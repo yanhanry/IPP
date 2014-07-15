@@ -7,3 +7,21 @@ $(document).ready(function () {
     }
 
 );
+
+function add_fight() {
+    var data = $('#add_fight_form').serialize();
+    console.log(data);
+    $.ajax({
+        type: "POST",
+        url: $('#add_fight_form').attr('action'),
+        data: data,// 你的formid
+        async: false,
+        error: function (request) {
+            console.log(request);
+        },
+        success: function (data) {
+            console.log(data);
+        }
+    });
+    return false;
+}

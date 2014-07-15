@@ -35,7 +35,7 @@
 
 <div class="container" id="wrap">
     <!-- fight -->
-    <form action="<?php echo site_url('home/newfight') ?>" method="post">
+    <form id="add_fight_form" action="<?php echo site_url('home/newfight') ?>" method="post">
         <div class='input-group' id="start_time">
             <input name="start_time" class="form-control" type='text' placeholder="开始时间"/>
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
@@ -45,8 +45,11 @@
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 
         </div>
-        <input type="submit" value="提交"/>
+        <input type="submit" value="提交" onclick="return add_fight();"/>
     </form>
-    <!-- 显示可用的对手 -->
-
+    <!-- 显示可用的fight -->
+    <?php if (!isset($fights)) $fights = array() ?>
+    <?php foreach ($fights as $fight) : ?>
+        <?php var_dump($fight)?>
+    <?php endforeach ?>
 </div>
