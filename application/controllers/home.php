@@ -13,7 +13,14 @@ class home extends MY_Controller
         parent::__construct();
     }
 
-    public function index(){
+    public function index()
+    {
         $this->load_view('home');
+    }
+
+    public function newfight()
+    {
+        var_dump($_POST);
+        echo strtotime('07/14/2014 2:20 PM');// this work
     }
 } 

@@ -34,11 +34,19 @@
 </div>
 
 <div class="container" id="wrap">
- <!-- fight -->
-    <div class='input-group'>
-        <input class="form-control" type='text' placeholder="必填"/>
-        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-    </div>
- <!-- 显示可用的对手 -->
+    <!-- fight -->
+    <form action="<?php echo site_url('home/newfight') ?>" method="post">
+        <div class='input-group' id="start_time">
+            <input name="start_time" class="form-control" type='text' placeholder="开始时间"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+        <div class='input-group' id="end_time">
+            <input name="end_time" class="form-control" type='text' placeholder="结束时间"/>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+
+        </div>
+        <input type="submit" value="提交"/>
+    </form>
+    <!-- 显示可用的对手 -->
 
 </div>

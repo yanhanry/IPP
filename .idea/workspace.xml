@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac1979a3-1052-4ee1-afb3-d1ad2a10eace" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dt/bootstrap-datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dt/bootstrap-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/home.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dt/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/includes/footer.php" afterPath="$PROJECT_DIR$/application/views/includes/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/includes/header.php" afterPath="$PROJECT_DIR$/application/views/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/home.js" afterPath="$PROJECT_DIR$/assets/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
     </list>
     <ignored path="IPP.iws" />
@@ -32,28 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="site.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="9" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="840">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MY_Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="41" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="900">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="user_lib.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/libraries/user_lib.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="5" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1290">
+            <state line="33" column="5" selection-start="641" selection-end="641" vertical-scroll-proportion="-15.871795" vertical-offset="371" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -62,7 +39,7 @@
       <file leaf-file-name="fight_form.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/fight_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -98,16 +75,36 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="48" selection-start="520" selection-end="520" vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="1470">
+            <state line="47" column="38" selection-start="2190" selection-end="2190" vertical-scroll-proportion="-20.435898" vertical-offset="613" max-vertical-offset="1710">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="57" selection-start="394" selection-end="394" vertical-scroll-proportion="0.630105" vertical-offset="0" max-vertical-offset="857">
+              <folding>
+                <element signature="e#7#85#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="50" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="175" selection-end="175" vertical-scroll-proportion="0.34364262" vertical-offset="0" max-vertical-offset="873">
+            <state line="10" column="7" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -139,7 +136,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/views/includes/header.php" />
         <option value="$PROJECT_DIR$/application/views/includes/footer.php" />
-        <option value="$PROJECT_DIR$/application/controllers/home.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/login_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/send.php" />
@@ -150,6 +146,8 @@
         <option value="$PROJECT_DIR$/application/controllers/login.php" />
         <option value="$PROJECT_DIR$/application/libraries/user_lib.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
+        <option value="$PROJECT_DIR$/assets/home.js" />
+        <option value="$PROJECT_DIR$/application/controllers/home.php" />
       </list>
     </option>
   </component>
@@ -313,6 +311,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -520,15 +519,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="37" selection-start="265" selection-end="265" vertical-scroll-proportion="-8.461538" vertical-offset="0" max-vertical-offset="600">
-          <folding>
-            <element signature="e#7#85#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/fight.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="536" />
@@ -555,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/fight_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="898">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/send.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="810">
@@ -576,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="8" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="2520">
@@ -590,24 +566,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="45" selection-start="542" selection-end="542" vertical-scroll-proportion="-15.820513" vertical-offset="43" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/fight_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="898">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/user_lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="5" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1290">
+        <state line="33" column="5" selection-start="641" selection-end="641" vertical-scroll-proportion="-15.871795" vertical-offset="371" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="50" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="48" selection-start="520" selection-end="520" vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="1470">
+        <state line="47" column="38" selection-start="2190" selection-end="2190" vertical-scroll-proportion="-20.435898" vertical-offset="613" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="175" selection-end="175" vertical-scroll-proportion="0.34364262" vertical-offset="0" max-vertical-offset="873">
-          <folding />
+        <state line="23" column="57" selection-start="394" selection-end="394" vertical-scroll-proportion="0.630105" vertical-offset="0" max-vertical-offset="857">
+          <folding>
+            <element signature="e#7#85#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
