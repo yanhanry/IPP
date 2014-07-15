@@ -29,9 +29,6 @@
 </div>
 
 <div class="container" id="wrap">
-    <ol>
-        <li><a href="model.html">Model</a></li>
-        <li><a href="service.html">Service</a></li>
-    </ol>
+
 
 </div>

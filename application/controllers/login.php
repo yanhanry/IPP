@@ -40,27 +40,29 @@ class Login extends MY_Controller
 
     function create_member()
     {
-
-        $this->load->library('form_validation');
-
-        $this->form_validation->set_rules('email_address', 'Email Address', 'trimlrequired|valid_email');
-
-
-        $this->form_validation->set_rules('username', 'Username', 'trimlrequired|min_length[4]|callback_username_check');
-        $this->form_validation->set_rules('password', 'Password', 'trimlrequired|min_length[4]|max_length[32]');
-        $this->form_validation->set_rules('password2', 'Password Confirmation', 'trimlrequired|matches[password]');
-        if ($this->form_validation->run() == FALSE) {
-            $this->signup();
-        } else {
-            $this->load->model('membership_model');
-            if ($query = $this->membership_model->create_member()) {
-                $data['main_content'] = 'signup_successful';
-                $this->load->view('includes/template', $data);
-            } else {
-                $this->load->view('signup_form');
-            }
+        $err_msg = array();
+        if (!$this->input->post('email_address')) {
+            $err_msg[] = '邮箱不能为空';
+        }
+        if (!$this->input->post('username')) {
+            $err_msg[] = '用户名不能为空';
+        }
+        if (!$this->input->post('password')) {
+            $err_msg[] = '密码不能为空';
+        }
+        if ($this->input->post('password') !== $this->input->post('password2')) {
+            $err_msg[] = '两次密码不相等';
+        }
+        if (!empty($err_msg)) {
+            $this->load_view('sign_up', array('err_msg' => $err_msg));
         }
 
+        $this->load->model('membership_model');
+        if ($this->membership_model->create_member()) {
+            $this->load_view('sign_up_done');
+        } else {
+            $this->load_view('sign_up');
+        }
 
     }
 

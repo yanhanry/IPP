@@ -2,7 +2,7 @@
 
 class MY_Controller extends CI_Controller
 {
-    private $data;
+    private $data = array();
 
     public function __construct()
     {
