@@ -1,20 +1,22 @@
 <?php
 
-class Login extends CI_Controller
+class Login extends MY_Controller
 {
-
-    function index()
+    public function __construct()
     {
-        $data['main_content'] = 'login_form';
-        $this->load->view('includes/template', $data);
+        parent::__construct();
     }
 
-    function validate_credentials()
+    public function index()
+    {
+        $this->set_title('登录');
+        $this->load_view('login_form');
+    }
+
+    public function  validate_credentials()
     {
         $this->load->model('membership_model');
         $query = $this->membership_model->validate();
-
-
         if ($query) {
             $data = array(
                 'user_name' => $this->input->post('username'),
@@ -24,16 +26,15 @@ class Login extends CI_Controller
             $this->session->set_userdata($data);
             redirect('');
         } else {
-            $data['main_content'] = 'login_form';
+            $this->set_title('登录失败');
             $data['login_error'] = '用户名或密码错误';
-            $this->load->view('includes/template', $data);
+            $this->load_view('login_form', $data);
         }
     }
 
-    function signup()
+    public function join()
     {
-        $data['main_content'] = 'signup_form';
-        $this->load->view('includes/template', $data);
+        $this->load_view('sign_up');
     }
 
 
