@@ -6,8 +6,7 @@
  * Date: 14-7-6
  * Time: 下午10:05
  */
-require 'class.phpmailer.php';
-require 'class.smtp.php';
+
 
 class send extends CI_Controller
 {

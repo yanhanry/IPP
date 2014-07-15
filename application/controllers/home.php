@@ -1,22 +1,23 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: W7_64
- * Date: 14-7-6
- * Time: 下午8:49
+ * Class home
+ *
+ * @property fight_model fight_model
  */
 class home extends MY_Controller
 {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('fight_model');
     }
 
     public function index()
     {
-        $data['fights'] = $this->_get_all_fight();
+        $data['fights'] = $this->fight_model->get_all_available_fights();
         $this->load_view('home', $data);
+
     }
 
     public function newfight()
@@ -72,6 +73,22 @@ class home extends MY_Controller
             $err_msg[] = '已经有人跟他干了，抱歉';
         }
 
+        $this->load->library('mailer');
+
+        // 获取发起人的信息
+        $sql = 'SELECT * FROM membership WHERE id=?';
+        $starter = $this->db->query($sql, array($fight['starter']))->row_array();
+        $opt = array('name' => $starter['username'],
+            'dst' => $starter['email_address'],
+            'content' =>
+            $this->user_lib->name() . '邀请你打球'
+            //TODO:具体的时间和地点
+        );
+
+        if (!$this->mailer->send($opt)) {
+            $err_msg[] = '无法发送邮件';
+        }
+
         if (!empty($err_msg)) {
             $data['err_msg'] = $err_msg;
         } else {
@@ -88,11 +105,7 @@ class home extends MY_Controller
     // 获取所有可用的fight
     private function _get_all_fight()
     {
-        $sql = 'SELECT fight.*,membership.username FROM fight
-        JOIN membership ON fight.starter = membership.id
-        WHERE  fight.enemy = 0
-        ';
-        return $this->db->query($sql)->result_array();
+
     }
 
 

@@ -38,6 +38,9 @@ class user_lib
         return !empty($name);
     }
 
+    public function name(){
+        return $this->ci->session->userdata('user_name');
+    }
     public function uid(){
         return $this->ci->session->userdata('uid');
     }
