@@ -75,6 +75,7 @@ class home extends MY_Controller
 
         $this->load->library('mailer');
 
+        /* 发邮件 需要到 application/libraries/mailer.php里改发送信箱
         // 获取发起人的信息
         $sql = 'SELECT * FROM membership WHERE id=?';
         $starter = $this->db->query($sql, array($fight['starter']))->row_array();
@@ -88,6 +89,7 @@ class home extends MY_Controller
         if (!$this->mailer->send($opt)) {
             $err_msg[] = '无法发送邮件';
         }
+        */
 
         if (!empty($err_msg)) {
             $data['err_msg'] = $err_msg;

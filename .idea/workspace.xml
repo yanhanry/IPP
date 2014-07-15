@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac1979a3-1052-4ee1-afb3-d1ad2a10eace" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/fight_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/mailer.php" />
-      <change type="DELETED" beforePath="E:\vagrant\tongqu4\IPP\application\models\data_model.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\vagrant\tongqu4\IPP\application\models\site_model.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\PHPMailerAutoload.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\class.phpmailer.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\class.pop3.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\class.smtp.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/send.php" afterPath="$PROJECT_DIR$/application/controllers/send.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/user_lib.php" afterPath="$PROJECT_DIR$/application/libraries/user_lib.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\PHPMailerAutoload.php" afterPath="$PROJECT_DIR$/application/libraries/PHPMailerAutoload.php" />
-      <change type="MOVED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\class.phpmailer.php" afterPath="$PROJECT_DIR$/application/libraries/class.phpmailer.php" />
-      <change type="MOVED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\class.pop3.php" afterPath="$PROJECT_DIR$/application/libraries/class.pop3.php" />
-      <change type="MOVED" beforePath="E:\vagrant\tongqu4\IPP\application\controllers\class.smtp.php" afterPath="$PROJECT_DIR$/application/libraries/class.smtp.php" />
     </list>
     <ignored path="IPP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,22 +65,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="73" selection-start="332" selection-end="332" vertical-scroll-proportion="-12.307693" vertical-offset="30" max-vertical-offset="3510">
+            <state line="95" column="16" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.45507586" vertical-offset="2460" max-vertical-offset="3570">
               <folding>
-                <marker date="1405412715301" expanded="true" signature="1580:1612" placeholder="SELECT * FRO..fight..." />
-                <marker date="1405412715301" expanded="true" signature="2110:2145" placeholder="SELECT * FRO..membership..." />
+                <marker date="1405412857755" expanded="true" signature="1580:1612" placeholder="SELECT * FRO..fight..." />
+                <marker date="1405412857755" expanded="true" signature="2168:2203" placeholder="SELECT * FRO..membership..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fight_model.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fight_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/fight_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="2" selection-start="830" selection-end="830" vertical-scroll-proportion="0.8949825" vertical-offset="313" max-vertical-offset="1260">
+            <state line="41" column="2" selection-start="830" selection-end="830" vertical-scroll-proportion="-19.666666" vertical-offset="313" max-vertical-offset="1260">
               <folding>
                 <element signature="e#7#86#0" expanded="false" />
                 <marker date="1405412740805" expanded="true" signature="377:479" placeholder="SELECT fight..fight..." />
@@ -170,8 +163,8 @@
         <option value="$PROJECT_DIR$/application/controllers/send.php" />
         <option value="$PROJECT_DIR$/application/libraries/mailer.php" />
         <option value="$PROJECT_DIR$/application/libraries/user_lib.php" />
-        <option value="$PROJECT_DIR$/application/controllers/home.php" />
         <option value="$PROJECT_DIR$/application/models/fight_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/home.php" />
       </list>
     </option>
   </component>
@@ -713,23 +706,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="73" selection-start="332" selection-end="332" vertical-scroll-proportion="-12.307693" vertical-offset="30" max-vertical-offset="3510">
-          <folding>
-            <marker date="1405412715301" expanded="true" signature="1580:1612" placeholder="SELECT * FRO..fight..." />
-            <marker date="1405412715301" expanded="true" signature="2110:2145" placeholder="SELECT * FRO..membership..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/fight_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="2" selection-start="830" selection-end="830" vertical-scroll-proportion="0.8949825" vertical-offset="313" max-vertical-offset="1260">
+        <state line="41" column="2" selection-start="830" selection-end="830" vertical-scroll-proportion="-19.666666" vertical-offset="313" max-vertical-offset="1260">
           <folding>
             <element signature="e#7#86#0" expanded="false" />
             <marker date="1405412740805" expanded="true" signature="377:479" placeholder="SELECT fight..fight..." />
             <marker date="1405412740805" expanded="true" signature="622:755" placeholder="SELECT fight..fight..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="16" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.45507586" vertical-offset="2460" max-vertical-offset="3570">
+          <folding>
+            <marker date="1405412857755" expanded="true" signature="1580:1612" placeholder="SELECT * FRO..fight..." />
+            <marker date="1405412857755" expanded="true" signature="2168:2203" placeholder="SELECT * FRO..membership..." />
           </folding>
         </state>
       </provider>
