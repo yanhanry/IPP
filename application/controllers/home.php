@@ -21,6 +21,7 @@ class home extends MY_Controller
 
     public function newfight()
     {
+        $this->output->enable_profiler();
         if (!$this->input->post()) {
             $this->load_view('newfight');
             return;
@@ -37,14 +38,15 @@ class home extends MY_Controller
         if (!$this->input->post('start_time')) {
             $err_msg[] = '开始时间不能为空';
         } else {
-            $insert_data['start_time'] = strtotime($this->input->post('start_time'));
+            $insert_data['start_time'] = date("Y-m-d H:i:s", strtotime($this->input->post('start_time')));
         }
         if (!$this->input->post('end_time')) {
             $err_msg[] = '结束时间不能为空';
         } else {
-            $insert_data['end_time'] = strtotime($this->input->post('end_time'));
+            $insert_data['end_time'] = date("Y-m-d H:i:s", strtotime($this->input->post('end_time')));
         }
         $this->db->insert('fight', $insert_data);
+        var_dump($insert_data);
         if (!empty($err_msg)) {
             $this->load_view('newfight', array('err_msg' => $err_msg));
         } else {
@@ -57,7 +59,7 @@ class home extends MY_Controller
     // 获取所有可用的fight
     private function _get_all_fight()
     {
-        $sql = 'SELECT * FROM fight';
+        $sql = 'SELECT fight.*,membership.username FROM fight JOIN membership ON fight.starter = membership.id';
         return $this->db->query($sql)->result_array();
     }
 } 
