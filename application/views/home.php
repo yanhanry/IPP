@@ -8,11 +8,7 @@
                 <span>发起人</span>
                 <?php echo $fight['username'] ?>
             </div>
-            <div>
-                <span>对手id</span>
-                <!--TODO:根据id查询对手的名字-->
-                <?php echo $fight['enemy'] ?>
-            </div>
+
             <div>
                 <span>等级</span>
                 <?php echo $fight['rank'] ?>
@@ -24,6 +20,9 @@
             <div>
                 <span>结束时间</span>
                 <?php echo $fight['end_time'] ?>
+            </div>
+            <div>
+                <a href="<?php echo site_url('home/joinfight?fightid=') . $fight['id'] ?>" class="btn btn-info">跟他干</a>
             </div>
         </div>
         <?php //var_dump($fight) ?>

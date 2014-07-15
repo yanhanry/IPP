@@ -21,7 +21,7 @@ class home extends MY_Controller
 
     public function newfight()
     {
-        $this->output->enable_profiler();
+
         if (!$this->input->post()) {
             $this->load_view('newfight');
             return;
@@ -46,7 +46,6 @@ class home extends MY_Controller
             $insert_data['end_time'] = date("Y-m-d H:i:s", strtotime($this->input->post('end_time')));
         }
         $this->db->insert('fight', $insert_data);
-        var_dump($insert_data);
         if (!empty($err_msg)) {
             $this->load_view('newfight', array('err_msg' => $err_msg));
         } else {
@@ -56,10 +55,42 @@ class home extends MY_Controller
 
     }
 
+    public function joinfight()
+    {
+        $fight_id = $this->input->get('fightid');
+        $fight_sql = 'SELECT * FROM fight WHERE id = ?';
+        $fight = $this->db->query($fight_sql, array($fight_id))->row_array();
+        if (!empty($fight)) {
+            var_dump($fight);
+        }
+        $data = array();
+        $err_msg = array();
+        if ($fight['enemy'] != 0) {
+            $err_msg[] = '已经有人跟他干了，抱歉';
+        } else {
+            $this->db->where('id', $fight_id);
+            $this->db->update('fight', array(
+                'enemy' => $this->user_lib->uid()
+            ));
+        }
+        if (!empty($err_msg)) {
+            $data['err_msg'] = $err_msg;
+        } else {
+            $data['success'] = TRUE;
+        }
+        $this->load_view('joinfight', $data);
+        return;
+    }
+
     // 获取所有可用的fight
     private function _get_all_fight()
     {
-        $sql = 'SELECT fight.*,membership.username FROM fight JOIN membership ON fight.starter = membership.id';
+        $sql = 'SELECT fight.*,membership.username FROM fight
+        JOIN membership ON fight.starter = membership.id
+        WHERE  fight.enemy = 0
+        ';
         return $this->db->query($sql)->result_array();
     }
+
+
 } 

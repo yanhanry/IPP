@@ -8,6 +8,9 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->library('user_lib');
+        if (ENVIRONMENT === 'development') {
+            $this->output->enable_profiler();
+        }
     }
 
     public function set_title($title)

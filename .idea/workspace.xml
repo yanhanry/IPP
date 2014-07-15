@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac1979a3-1052-4ee1-afb3-d1ad2a10eace" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/joinfight.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/style.css" afterPath="$PROJECT_DIR$/assets/style.css" />
     </list>
     <ignored path="IPP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,16 +31,7 @@
       <file leaf-file-name="newfight.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/newfight.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="51" selection-start="102" selection-end="102" vertical-scroll-proportion="-1.5384616" vertical-offset="0" max-vertical-offset="810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="6300">
+            <state line="7" column="23" selection-start="20" selection-end="307" vertical-scroll-proportion="-5.3846154" vertical-offset="0" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -63,14 +55,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="100" selection-start="1193" selection-end="1193" vertical-scroll-proportion="-15.820513" vertical-offset="583" max-vertical-offset="1950">
+            <state line="73" column="15" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.50991833" vertical-offset="1603" max-vertical-offset="2880">
               <folding>
                 <element signature="e#7#85#0" expanded="false" />
-                <marker date="1405408568583" expanded="true" signature="1573:1667" placeholder="SELECT fight..fight..." />
+                <marker date="1405409819291" expanded="true" signature="1530:1562" placeholder="SELECT * FRO..fight..." />
+                <marker date="1405409819291" expanded="true" signature="2314:2447" placeholder="SELECT fight..fight..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="joinfight.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/joinfight.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="19" selection-start="277" selection-end="277" vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="360">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,19 +95,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="17" selection-start="479" selection-end="479" vertical-scroll-proportion="0.52508754" vertical-offset="0" max-vertical-offset="1080">
+            <state line="10" column="7" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="24" column="86" selection-start="766" selection-end="766" vertical-scroll-proportion="-14.51282" vertical-offset="154" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -141,16 +143,17 @@
         <option value="$PROJECT_DIR$/application/controllers/send.php" />
         <option value="$PROJECT_DIR$/application/views/sign_up.php" />
         <option value="$PROJECT_DIR$/application/views/members_area.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/application/controllers/login.php" />
         <option value="$PROJECT_DIR$/assets/home.js" />
         <option value="$PROJECT_DIR$/application/models/membership_model.php" />
         <option value="$PROJECT_DIR$/application/libraries/user_lib.php" />
         <option value="$PROJECT_DIR$/application/views/includes/header.php" />
         <option value="$PROJECT_DIR$/application/views/newfight.php" />
-        <option value="$PROJECT_DIR$/application/controllers/home.php" />
-        <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/assets/style.css" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/application/views/home.php" />
+        <option value="$PROJECT_DIR$/application/views/joinfight.php" />
+        <option value="$PROJECT_DIR$/application/controllers/home.php" />
       </list>
     </option>
   </component>
@@ -337,7 +340,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
-    <property name="SearchEverywhereHistory" value="newfi&#10;head" />
+    <property name="SearchEverywhereHistory" value="home&#10;newfi&#10;head" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -576,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="45" selection-start="542" selection-end="542" vertical-scroll-proportion="-15.820513" vertical-offset="43" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/fight_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="898">
@@ -625,34 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="78" selection-start="1509" selection-end="1509" vertical-scroll-proportion="-13.51282" vertical-offset="373" max-vertical-offset="1530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/newfight.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="51" selection-start="102" selection-end="102" vertical-scroll-proportion="-1.5384616" vertical-offset="0" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6300">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="100" selection-start="1193" selection-end="1193" vertical-scroll-proportion="-15.820513" vertical-offset="583" max-vertical-offset="1950">
-          <folding>
-            <element signature="e#7#85#0" expanded="false" />
-            <marker date="1405408568583" expanded="true" signature="1573:1667" placeholder="SELECT fight..fight..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,10 +635,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="78" selection-start="1509" selection-end="1509" vertical-scroll-proportion="-13.51282" vertical-offset="373" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="479" selection-end="479" vertical-scroll-proportion="0.52508754" vertical-offset="0" max-vertical-offset="1080">
+        <state line="24" column="86" selection-start="766" selection-end="766" vertical-scroll-proportion="-14.51282" vertical-offset="154" max-vertical-offset="1050">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.820513" vertical-offset="133" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/newfight.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="20" selection-end="307" vertical-scroll-proportion="-5.3846154" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/joinfight.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="277" selection-end="277" vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="15" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.50991833" vertical-offset="1603" max-vertical-offset="2880">
+          <folding>
+            <element signature="e#7#85#0" expanded="false" />
+            <marker date="1405409819291" expanded="true" signature="1530:1562" placeholder="SELECT * FRO..fight..." />
+            <marker date="1405409819291" expanded="true" signature="2314:2447" placeholder="SELECT fight..fight..." />
+          </folding>
         </state>
       </provider>
     </entry>
