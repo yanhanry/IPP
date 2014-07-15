@@ -7,22 +7,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">IPP</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo site_url() ?>">首页</a></li>
-                <li><a href="<?php echo site_url('login') ?>">登录</a></li>
-                <li><a href="<?php echo site_url('login/signup') ?>">注册</a></li>
-                <li><a herf-"<?php echo site_url('login/fighting') ?>">炸天</a></li>
+                <?php if (!$this->user_lib->is_login()): ?>
+                    <li><a href="<?php echo site_url('login') ?>">登录</a></li>
+                    <li><a href="<?php echo site_url('login/join') ?>">注册</a></li>
+                <?php else: ?>
+                    <li><a href="<?php echo site_url('login/fighting') ?>">炸天</a></li>
+                <?php endif ?>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">
-                      <?php echo $this->session->userdata('user_name');?>
-                    </a>
-                </li>
-            </ul>
+            <?php if ($this->user_lib->is_login()): ?>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a>
+                            <?php echo $this->session->userdata('user_name'); ?>
+                        </a>
+                    </li>
+                </ul>
+            <?php endif ?>
         </div>
         <!--/.nav-collapse -->
     </div>

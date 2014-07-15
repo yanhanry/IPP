@@ -15,21 +15,14 @@ class Login extends MY_Controller
 
     public function  validate_credentials()
     {
-        $this->load->model('membership_model');
-        $query = $this->membership_model->validate();
-        if ($query) {
-            $data = array(
-                'user_name' => $this->input->post('username'),
-                'is_logged_in' => true
-            );
-
-            $this->session->set_userdata($data);
+        if ($this->user_lib->login()) {
             redirect('');
         } else {
             $this->set_title('登录失败');
             $data['login_error'] = '用户名或密码错误';
             $this->load_view('login_form', $data);
         }
+
     }
 
     public function join()
@@ -53,16 +46,22 @@ class Login extends MY_Controller
         if ($this->input->post('password') !== $this->input->post('password2')) {
             $err_msg[] = '两次密码不相等';
         }
+        // 检查是否重名
+        if (!$this->username_check($this->input->post('username'))) {
+            $err_msg[] = '用户名: ' . $this->input->post('username') . ' 已被注册';
+        }
+        // TODO:检测邮箱
+
         if (!empty($err_msg)) {
             $this->load_view('sign_up', array('err_msg' => $err_msg));
+            return;
         }
 
         $this->load->model('membership_model');
-        if ($this->membership_model->create_member()) {
-            $this->load_view('sign_up_done');
-        } else {
-            $this->load_view('sign_up');
-        }
+
+        $this->membership_model->create_member();
+        $this->load_view('sign_up_done');
+
 
     }
 
@@ -72,7 +71,6 @@ class Login extends MY_Controller
         $query = $this->db->get('membership');
 
         if ($query->num_rows()) {
-            $this->form_validation->set_message('username_check', 'The username has already been registered.');
             return FALSE;
         } else {
             return TRUE;

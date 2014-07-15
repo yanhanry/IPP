@@ -23,8 +23,7 @@ class Membership_model extends CI_Model
             'power' => $this->getpower()
         );
 
-        $insert = $this->db->insert('membership', $new_member_insert_data);
-        return $insert;
+        $this->db->insert('membership', $new_member_insert_data);
     }
 
     function getpower()
