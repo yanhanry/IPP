@@ -16,17 +16,47 @@ class home extends MY_Controller
     public function index()
     {
         $data['fights'] = $this->_get_all_fight();
-        $this->load_view('home',$data);
+        $this->load_view('home', $data);
     }
 
     public function newfight()
     {
-        var_dump($_POST);
-        echo strtotime('07/14/2014 2:20 PM');// this work
+        if (!$this->input->post()) {
+            $this->load_view('newfight');
+            return;
+        }
+
+        $insert_data = array(
+            'starter' => $this->user_lib->uid(),
+            'enemy' => 0,
+            'start_time' => 0,
+            'end_time' => 0,
+            'rank' => $this->user_lib->power()
+        );
+        $err_msg = array();
+        if (!$this->input->post('start_time')) {
+            $err_msg[] = '开始时间不能为空';
+        } else {
+            $insert_data['start_time'] = strtotime($this->input->post('start_time'));
+        }
+        if (!$this->input->post('end_time')) {
+            $err_msg[] = '结束时间不能为空';
+        } else {
+            $insert_data['end_time'] = strtotime($this->input->post('end_time'));
+        }
+        $this->db->insert('fight', $insert_data);
+        if (!empty($err_msg)) {
+            $this->load_view('newfight', array('err_msg' => $err_msg));
+        } else {
+            $this->load_view('newfight', array('success' => 1));
+        }
+
+
     }
 
     // 获取所有可用的fight
-    private function _get_all_fight(){
+    private function _get_all_fight()
+    {
         $sql = 'SELECT * FROM fight';
         return $this->db->query($sql)->result_array();
     }

@@ -13,12 +13,14 @@ class user_lib
     public function login()
     {
         $this->ci->load->model('membership_model');
-        if ($this->ci->membership_model->validate()) {
+        $user_data = $this->ci->membership_model->validate();
+        if (is_array($user_data) AND !empty($user_data)) {
             $data = array(
                 'user_name' => $this->ci->input->post('username'),
-                'login' => true
+                'login' => true,
+                'uid'=> $user_data['id'],
+                'power'=>$user_data['power']
             );
-
             $this->ci->session->set_userdata($data);
             return TRUE;
         }
@@ -34,5 +36,13 @@ class user_lib
     {
         $name = $this->ci->session->userdata('user_name');
         return !empty($name);
+    }
+
+    public function uid(){
+        return $this->ci->session->userdata('uid');
+    }
+
+    public function power(){
+        return $this->ci->session->userdata('power');
     }
 } 
