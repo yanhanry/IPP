@@ -34,6 +34,11 @@
 </div>
 
 <div class="container" id="wrap">
-
+ <!-- fight -->
+    <div class='input-group'>
+        <input class="form-control" type='text' placeholder="必填"/>
+        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+ <!-- 显示可用的对手 -->
 
 </div>
