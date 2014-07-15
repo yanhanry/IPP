@@ -65,17 +65,20 @@ class home extends MY_Controller
         }
         $data = array();
         $err_msg = array();
+        if ($fight['starter'] == $this->user_lib->uid()) {
+            $err_msg[] = '请不要自己跟自己打，这么寂寞，去写代码吧,反正也找不到妹子。。。';
+        }
         if ($fight['enemy'] != 0) {
             $err_msg[] = '已经有人跟他干了，抱歉';
+        }
+
+        if (!empty($err_msg)) {
+            $data['err_msg'] = $err_msg;
         } else {
             $this->db->where('id', $fight_id);
             $this->db->update('fight', array(
                 'enemy' => $this->user_lib->uid()
             ));
-        }
-        if (!empty($err_msg)) {
-            $data['err_msg'] = $err_msg;
-        } else {
             $data['success'] = TRUE;
         }
         $this->load_view('joinfight', $data);

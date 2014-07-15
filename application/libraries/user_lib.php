@@ -29,7 +29,7 @@ class user_lib
 
     public function logout()
     {
-        $this->session->destroy();
+        $this->ci->session->sess_destroy();
     }
 
     public function is_login()

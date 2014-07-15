@@ -38,6 +38,9 @@
                             <?php echo $this->session->userdata('user_name'); ?>
                         </a>
                     </li>
+                    <li>
+                        <a href="<?php echo site_url('login/logout')?>">注销</a>
+                    </li>
                 </ul>
             <?php endif ?>
         </div>

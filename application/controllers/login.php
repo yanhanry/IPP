@@ -13,6 +13,13 @@ class Login extends MY_Controller
         $this->load_view('login_form');
     }
 
+    public function logout()
+    {
+        $this->user_lib->logout();
+        echo 'logout!';
+        redirect(site_url());
+    }
+
     public function  validate_credentials()
     {
         if ($this->user_lib->login()) {
