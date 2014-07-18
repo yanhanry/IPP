@@ -7,10 +7,41 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css') ?>"/>
     <link rel="stylesheet" href="<?php echo base_url('assets/dt/bootstrap-datetimepicker.css') ?>"/>
     <link rel="stylesheet" href="<?php echo base_url('assets/style.css') ?>"/>
+    <link rel="stylesheet" href="<?php echo base_url('assets/main.css') ?>"/>
 </head>
 
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<body style="margin:0;padding:0; background-color:#2d3538;">
+<nav style="position:fixed;width:100%;height:80px;border-bottom:1px solid;border-color:rgba(0,0,0,0.2); z-index:2;">
+    <div style="float:left;height:60px;width:60px; margin-left:10%;">
+        <a href="" >
+            <span id="logo" style="background-image:url(ipplogo_black.png);float:left;display:block;height:60px;width:60px;background-size:60px;margin-left:50px;margin-top:10px;background-repeat:no-repeat;"></span>
+            <a href="<?php echo site_url('home') ?>" id="header" style="color:white; position:absolute; margin-left:120px; margin-top:18px; font-weight:500; font-size:14px; font-family:Microsoft YaHei;">LandderMitton<br/>羽梯在线对战系统</a>
+        </a>
+    </div>
+    <ul style="float:right; margin-right:15%;">
+        <?php if (!$this->user_lib->is_login()): ?>
+            <li><a href="<?php echo site_url('login') ?>#login_form">Login</a></li>
+            <li><a href="<?php echo site_url('login/join') ?>#join">Register</a></li>
+        <?php else: ?>
+            <li><a href="<?php echo site_url('home/newfight') ?>#wrap">New Battle</a></li>
+            <li><a href="<?php echo site_url('login/logout')?>">Logout</a></li>
+        <?php endif ?>
+        <!-- <li><a href="#">GUIDE</a></li>
+        <li><a href="#">HISTORY</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="<?php echo site_url('login/join') ?>">REGISTER</a></li>
+        <li><a href="<?php echo site_url('login') ?>">LOGIN</a></li> -->
+    </ul>
+</nav>
+<div class="banner">
+    <div style="padding-top:200px; padding-left:15%; color:white; font-size:30px; font-weight:900;">We build this world for you to</div>
+    <div style="padding-left:15%; color:white; font-size:150px; font-weight:900;">PLAY</div>
+    <div style="margin-left:15%;margin-top:20px;">
+        <a class="button1" href="<?php echo site_url('login') ?>" style ="margin-left:0px; font-size:15px; diaplay:block; position:absolute; border:1px solid; padding:15px 60px; font-weight:900;">Login Now!</a>
+        <a class="button1" href="#wrap" style ="margin-left:212px; font-size:15px; diaplay:block; position:absolute; border:1px solid; padding:15px 60px; font-weight:900;">Enter Game!</a>
+    </div>
+</div>
+<!-- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -44,6 +75,5 @@
                 </ul>
             <?php endif ?>
         </div>
-        <!--/.nav-collapse -->
     </div>
-</div>
+</div> -->

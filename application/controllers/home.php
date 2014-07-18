@@ -61,9 +61,9 @@ class home extends MY_Controller
         $fight_id = $this->input->get('fightid');
         $fight_sql = 'SELECT * FROM fight WHERE id = ?';
         $fight = $this->db->query($fight_sql, array($fight_id))->row_array();
-        if (!empty($fight)) {
-            var_dump($fight);
-        }
+        // if (!empty($fight)) {
+        //     var_dump($fight);
+        // }
         $data = array();
         $err_msg = array();
         if ($fight['starter'] == $this->user_lib->uid()) {
