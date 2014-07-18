@@ -1,82 +1,86 @@
 <?php
 
-class Login extends CI_Controller{
+class Login extends MY_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
-	function index()
-	{
-		$data['main_content']='login_form';
-		$this->load->view('includes/template',$data);
-	}
+    public function index()
+    {
+        $this->set_title('登录');
+        $this->load_view('login_form');
+    }
 
-	function validate_credentials()
-	{
-		$this->load->model('membership_model');
-		$query=$this->membership_model->validate();
+    public function logout()
+    {
+        $this->user_lib->logout();
+        echo 'logout!';
+        redirect(site_url());
+    }
+
+    public function  validate_credentials()
+    {
+        if ($this->user_lib->login()) {
+            redirect('');
+        } else {
+            $this->set_title('登录失败');
+            $data['login_error'] = '用户名或密码错误';
+            $this->load_view('login_form', $data);
+        }
+
+    }
+
+    public function join()
+    {
+        $this->load_view('sign_up');
+    }
 
 
-		if($query)
-		{
-			$data = array(
-				'username' => $this->input->post('username'),
-				'is_logged_in'=> true
-				);
+    function create_member()
+    {
+        $err_msg = array();
+        if (!$this->input->post('email_address')) {
+            $err_msg[] = '邮箱不能为空';
+        }
+        if (!$this->input->post('username')) {
+            $err_msg[] = '用户名不能为空';
+        }
+        if (!$this->input->post('password')) {
+            $err_msg[] = '密码不能为空';
+        }
+        if ($this->input->post('password') !== $this->input->post('password2')) {
+            $err_msg[] = '两次密码不相等';
+        }
+        // 检查是否重名
+        if (!$this->username_check($this->input->post('username'))) {
+            $err_msg[] = '用户名: ' . $this->input->post('username') . ' 已被注册';
+        }
+        // TODO:检测邮箱
 
-			$this->session->set_userdata($data);
-			redirect('site/members_area');
-		}
+        if (!empty($err_msg)) {
+            $this->load_view('sign_up', array('err_msg' => $err_msg));
+            return;
+        }
 
-		else
-		{
-			$this->index();
-		}
-	}
-	function signup()
-	{
-		$data['main_content']='signup_form';
-		$this->load->view('includes/template',$data);
-	}
+        $this->load->model('membership_model');
 
-	function create_member()
-	{
+        $this->membership_model->create_member();
+        $this->load_view('sign_up_done');
 
-		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules('email_address','Email Address','trimlrequired|valid_email');
+    }
 
-		$this->form_validation->set_rules('username','Username','trimlrequired|min_length[4]|callback_username_check');
-		$this->form_validation->set_rules('password','Password','trimlrequired|min_length[4]|max_length[32]');
-		$this->form_validation->set_rules('password2','Password Confirmation','trimlrequired|matches[password]');
-		if ($this->form_validation->run()==FALSE) 
-			{
-				$this->signup();
-			}
-		else 
-		{
-			$this->load->model('membership_model');
-			if($query = $this->membership_model->create_member())
-			{
-				$data['main_content'] = 'signup_successful';
-				$this->load->view('includes/template',$data);
-			}
-			else
-			{
-				$this->load->view('signup_form');
-			}
-		}
-		
-	}
-	public function username_check($str)
-	{
-			$this->db->where('username');
-			$query=$this->db->get('membership');
-  		if ($str == 'test')
-  			{
-   			$this->form_validation->set_message('username_check', 'The username has already been registered.');
-  			return FALSE;
-  			}
-  		else
-  			{
-   			return TRUE;
-  			}
- 	}
+    public function username_check($str)
+    {
+        $this->db->where('username', $str);
+        $query = $this->db->get('membership');
+
+        if ($query->num_rows()) {
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
 }
